@@ -18,9 +18,6 @@
                     demoDuration: component.get("v.demoDuration")
                 }
             },
-            pleaseWait: {
-                type: "Full"
-            },
             callBackMethod: function (response) {
                 console.log(response);
                 var e = response.output;

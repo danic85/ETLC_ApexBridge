@@ -10,10 +10,6 @@
                 controller: "ETLC_DEMO_04",
                 method: "pleaseWait"
             },
-            pleaseWait: {
-                type: type,
-                message: message
-            },
             callBackMethod: function (response) {
                 console.log(response.output);
             }

@@ -29,7 +29,6 @@
                 method: "insertAccounts",
                 records: records
             },
-            pleaseWait: { type: "Toast" },
             callBackMethod: function(response) {
                 console.log(response.output);
             }

@@ -1,5 +1,5 @@
 ({
-    findAcccounts: function (component, helper) {
+    findAccounts: function (component, helper) {
         var apexBridge = component.find("ApexBridge");
         apexBridge.callApex({
             component: component,
@@ -12,7 +12,6 @@
                     orderBy: 'Name'
                 }
             },
-            pleaseWait: { type: "Full", message: "Finding accounts, please wait" },
             callBackMethod: function (response) {
                 component.set("v.accounts", response.output);
             }
@@ -27,7 +26,6 @@
                 method: "saveAccounts",
                 records: component.get("v.accounts")
             },
-            pleaseWait: { type: "Toast", message: "Saving accounts, please wait" },
             callBackMethod: function (response) {
                 helper.findAcccounts(component, helper);
             }
