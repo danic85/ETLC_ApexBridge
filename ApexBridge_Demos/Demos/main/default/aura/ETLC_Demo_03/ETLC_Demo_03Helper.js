@@ -27,7 +27,7 @@
                 records: component.get("v.accounts")
             },
             callBackMethod: function (response) {
-                helper.findAcccounts(component, helper);
+                helper.findAccounts(component, helper);
             }
         });
     }

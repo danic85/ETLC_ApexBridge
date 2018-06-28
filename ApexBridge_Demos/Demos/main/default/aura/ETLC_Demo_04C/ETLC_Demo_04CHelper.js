@@ -8,10 +8,11 @@
             component: component,
             request: {
                 controller: "ETLC_DEMO_04",
-                method: "pleaseWait"
+                method: "pleaseWait",
+                input: {message: message}
             },
             callBackMethod: function (response) {
-                console.log(response.output);
+                alert(type + ": " + response.output);
             }
         });
     }

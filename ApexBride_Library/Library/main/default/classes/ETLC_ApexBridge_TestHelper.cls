@@ -36,8 +36,6 @@ public class ETLC_ApexBridge_TestHelper {
         response = ETLC_ApexBridge_Response.fromJSON(responseJson);
         // Test.stopTest();
         
-        // Basic asserts
-        System.assertEquals(requestJson, response.requestJson);
         return response;
     }
 
@@ -46,7 +44,7 @@ public class ETLC_ApexBridge_TestHelper {
     }
     public static void invalidMethodTest(String controller, String method) {
         ETLC_ApexBridge_TestHelper client = ETLC_ApexBridge_TestHelper.factory(controller, method);
-        // client.request.doesCallout = true;
+        // client.request.createSavePoint = true;
         ETLC_ApexBridge_Response response = client.validate();
 		
 		System.assertEquals(false, response.isSuccess);       

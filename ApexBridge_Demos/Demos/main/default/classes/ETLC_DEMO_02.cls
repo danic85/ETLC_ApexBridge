@@ -13,7 +13,7 @@ public with sharing class ETLC_DEMO_02 extends ETLC_ApexBridge_Abstract {
         ev.ActivityDateTime = DateTime.valueOf(request.getInputDateTime('demoWhen'));
         ev.DurationInMinutes = Integer.valueOf(request.getInputValue('demoDuration')); 
         ev.IsAllDayEvent = ev.DurationInMinutes >= (24*60);
-        ETLC_SecuredDB.performDML(ETLC_SecuredDB.Operation.inserting, ev);
+        insert ev;
         return ev;
     }
 }
