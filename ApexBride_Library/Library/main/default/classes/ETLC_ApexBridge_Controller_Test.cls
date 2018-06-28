@@ -7,7 +7,7 @@ public class ETLC_ApexBridge_Controller_Test {
         String value = 'This is a test';
         ETLC_ApexBridge_TestHelper client = ETLC_ApexBridge_TestHelper.factory('ETLC_ApexBridge_DemoEcho', 'echo');
         client.request.inputMap.put('value', value);
-        client.request.doesCallout = true;
+        client.request.createSavePoint = true;
 
         ETLC_ApexBridge_Response response = client.validate();
         System.assertEquals('"' + value + '"', response.output);
@@ -16,7 +16,7 @@ public class ETLC_ApexBridge_Controller_Test {
     @isTest 
     public static void invalidMethodTest2() {
         ETLC_ApexBridge_TestHelper client = ETLC_ApexBridge_TestHelper.factory('ETLC_ApexBridge_DemoEcho', 'InvalidMethod');
-        client.request.doesCallout = true;
+        client.request.createSavePoint = true;
         
         try {
             ETLC_ApexBridge_Response response = client.validate();
@@ -35,7 +35,7 @@ public class ETLC_ApexBridge_Controller_Test {
         ETLC_ApexBridge_TestHelper client = ETLC_ApexBridge_TestHelper.factory('ETLC_ApexBridge_DemoEcho', 'SampleOperation');
         ETLC_ApexBridge_Request request = client.request;
         request.inputMap = data;
-        request.doesCallout = true;
+        request.createSavePoint = true;
         request.input = ETLC_ApexBridge_Abstract.encodeData(request.inputMap);
         request.inputMap = null;
         request.debug = true;

@@ -25,10 +25,10 @@ public with sharing class ETLC_ApexBridge_Request {
     }
 
     @AuraEnabled
-    public boolean doesCallout {
+    public boolean createSavePoint {
         get {
-            if (doesCallout == null) doesCallout = false;
-            return doesCallout;
+            if (createSavePoint == null) createSavePoint = false;
+            return createSavePoint;
         }
         set;
     }
@@ -69,6 +69,6 @@ public with sharing class ETLC_ApexBridge_Request {
         input = JSON.serialize(inputMap);
         debug = false;
         records = new List<SObject>();
-        doesCallout = false;
+        createSavePoint = false;
     }
 }

@@ -1,6 +1,6 @@
 ({
 	doInit : function(component, event, helper) {
-		helper.findAcccounts(component, helper);
+		helper.findAccounts(component, helper);
 	},
     saveAccounts : function(component, event, helper) {
         helper.saveAccounts(component, helper);

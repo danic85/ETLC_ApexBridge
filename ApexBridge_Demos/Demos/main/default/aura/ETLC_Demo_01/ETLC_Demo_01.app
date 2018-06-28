@@ -1,5 +1,4 @@
 <aura:application extends="force:slds" >
-    <c:ETLC_PleaseWait />
     <c:ETLC_ApexBridge aura:id="ApexBridge" />
     
     <aura:attribute name="yourName" type="String" />

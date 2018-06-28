@@ -12,14 +12,11 @@
                 data2: value2,			    	// 		including several parameters
                 data3: value3,			    	// 		just put one at a time ;-)
             },
-            doesCallout: false,			    	// Optionally prevents a transaction (Save Point)
+            createSavePoint: false,			    	// Optionally prevents a transaction (Save Point)
             records: [aRecord],			    	// Optionally if you want to perform a DML operation on records you can pass them as list of records.
-            forceRefresh: false			    	// Do you want to forece a data refresh?
-        },
-        pleaseWait: {					    	// If you are using the PleaseWait component, you can fine tune it
-            type: "Toast",				    	// Possible values: Toast, Full
-            message: "Please Wait..."	    	// Set a special message if you do not want the default values
-        },
+            setStorable: false			    	// Do you want to force a data refresh?
+            setBackground: false			    // Do you want the call to be made as a background process?
+        }
         callBackMethod: function (data) {
         								    	// This is the call back function that will handle the response.
         },
@@ -33,14 +30,6 @@
         var params = event.getParam('arguments');
         if (params && params[0]) {
             helper.callServer(component, helper, params[0]);
-        } else {
-            throw new Error("No arguments passed!");
-        }
-    },
-    makeRecords : function(component, event, helper) {
-		var params = event.getParams().arguments;
-        if (params && params.data) {
-            helper.makeRecords(params.data);
         } else {
             throw new Error("No arguments passed!");
         }

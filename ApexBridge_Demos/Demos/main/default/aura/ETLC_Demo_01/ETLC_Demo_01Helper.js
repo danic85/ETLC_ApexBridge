@@ -22,11 +22,8 @@
                 input: {
                     personName: component.get("v.yourName")
                 },
-                forceRefresh: false,
-                doesCallout: false
-            },
-            pleaseWait: {
-                type: "Full"
+                setStorable: false,
+                createSavePoint: false
             },
             callBackMethod: function (response) {
                 alert(response.output);
