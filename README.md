@@ -1,4 +1,10 @@
-# ETLC_ApexBridge
+# ETLC_ApexBridge (Light)
+
+## Notes about this fork
+
+This version of the ELTC_ApexBridge aims to remove unnecessary features so that just the basic Apex Bridge pattern is implemented. This is necessary for packages that already handle some of the features included in the original repository. All code and tests have been updated, but be aware that the examples do not show best practices from a security perspective.
+
+For more information on security in Lightning, see [this post](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/apex_crud_fls.htm).
 
 ## Synopsis
 
@@ -44,7 +50,7 @@ Using Salesforce DX CLI you can install the packages like this:
 
 This repository uses the MIT library, which basically means it’s free… Enjoy!
 
-## About Me
+## About The Author
 
 ElToroIT [Twitter](https://twitter.com/ElToroIT) [LinkedIn](https://www.linkedin.com/in/eltoroit) loves helping developers understand Salesforce and how easy is to work with this great platform. He also teaches the Salesforce [developer courses](http://www.salesforce.com/services-training/training_certification/training-by-role.jsp) in English and Spanish.
 
